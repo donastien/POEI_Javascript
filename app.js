@@ -8,6 +8,6 @@ for (let i in tab) {
 
 
 /*----------------------------------------------*/
-h1.innerHTML = sortie;
+//h1.innerHTML = sortie;
 
 
