@@ -93,6 +93,49 @@ let livre1 = new Livre(12, 'Le Livre', 'Zola', 105);
 res1 = livre1.displayPage();
 */
 
+// Exercice Salaire
+/*
+function Personne(salaire, genre, charge, bonus, allocation) {
+    this.salaire = salaire;
+    this.genre = genre;
+    this.charge = charge;
+    this.bonus = bonus;
+    this.allocation = allocation;
+
+    this.calculSalaire = function() {
+        this.salaire = this.salaire-this.salaire*(18/100);
+        this.salaire = this.salaire-this.salaire*(7/100);
+        this.salaire = this.salaire-this.salaire*(5/100);
+
+        if(this.bonus) {
+            this.salaire += 100;
+        }
+
+        if(this.allocation) {
+            this.salaire += 150;
+        }
+
+        if(genre === 'femme') {
+            this.salaire = this.salaire+this.salaire*(2/100);
+        }
+
+        if(charge === 3) {
+            this.salaire = this.salaire+this.salaire*(1/100);
+        }
+
+        if(charge === 4) {
+            this.salaire = this.salaire+this.salaire*(2/100);
+        }
+
+        return Math.round(this.salaire*100)/100;
+    }
+    
+}
+
+let thomas = new Personne(1200, 'femme', 3, false, false);
+res1 = "Salaire : " + thomas.calculSalaire() + '€';
+*/
+
 /*---------------------Fin Exercices---------------------*/
 txt1.innerHTML = res1;
 txt2.innerHTML = res2;
