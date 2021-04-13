@@ -94,47 +94,48 @@ res1 = livre1.displayPage();
 */
 
 // Exercice Salaire
-/*
-function Personne(salaire, genre, charge, bonus, allocation) {
-    this.salaire = salaire;
-    this.genre = genre;
-    this.charge = charge;
-    this.bonus = bonus;
-    this.allocation = allocation;
+function personne(name, salaire, sexe, charge){
+  
+  this.name = name;
+  this.salaire = salaire;
+  this.sexe = sexe;
+  this.charge = charge;
 
-    this.calculSalaire = function() {
-        this.salaire = this.salaire-this.salaire*(18/100);
-        this.salaire = this.salaire-this.salaire*(7/100);
-        this.salaire = this.salaire-this.salaire*(5/100);
-
-        if(this.bonus) {
-            this.salaire += 100;
-        }
-
-        if(this.allocation) {
-            this.salaire += 150;
-        }
-
-        if(genre === 'femme') {
-            this.salaire = this.salaire+this.salaire*(2/100);
-        }
-
-        if(charge === 3) {
-            this.salaire = this.salaire+this.salaire*(1/100);
-        }
-
-        if(charge === 4) {
-            this.salaire = this.salaire+this.salaire*(2/100);
-        }
-
-        return Math.round(this.salaire*100)/100;
+  this.impotsAPayer = function(){
+    var taux = 18;
+    if(this.sexe === "F"){
+      taux-=2;
     }
-    
+    switch(charge){
+      case 3:
+        taux = taux - 1;
+      break;
+      case 4:
+        taux = taux - 2;
+    }
+    console.log("Le taux de " + this.name + " est : " + taux + "%");
+    console.log("l'impot a payer de " + this.name + " est : " + this.salaire*taux/100);
+    return this.salaire*taux/100;
+  }
+
+  this.assuranceApayer = function(){
+    console.log("l'assurance a payer de " + this.name + " est : " + this.salaire*7/100);
+    return this.salaire*7/100;
+  }
+
+  this.pensionAPayer = function(){
+    console.log("la pension a payer de " + this.name + " est : " + this.salaire*5/100);
+    return this.salaire*5/100;
+  }
+
+  this.salaireNet = function(){
+    return this.salaire - this.impotsAPayer() - this.assuranceApayer() - this.pensionAPayer();
+  }
+
 }
 
-let thomas = new Personne(1200, 'femme', 3, false, false);
-res1 = "Salaire : " + thomas.calculSalaire() + '€';
-*/
+let thomas = new personne("thomas", 1200, "F", 4);
+res1 = (thomas.salaireNet());
 
 /*---------------------Fin Exercices---------------------*/
 txt1.innerHTML = res1;
