@@ -94,12 +94,14 @@ res1 = livre1.displayPage();
 */
 
 // Exercice Salaire
-function personne(name, salaire, sexe, charge){
+function personne(name, salaire, sexe, charge, bonus, allocation){
   
   this.name = name;
   this.salaire = salaire;
   this.sexe = sexe;
   this.charge = charge;
+  this.bonus = bonus;
+  this.allocation = allocation;
 
   this.impotsAPayer = function(){
     var taux = 18;
@@ -113,24 +115,28 @@ function personne(name, salaire, sexe, charge){
       case 4:
         taux = taux - 2;
     }
-    console.log("Le taux de " + this.name + " est : " + taux + "%");
-    console.log("l'impot a payer de " + this.name + " est : " + this.salaire*taux/100);
     return this.salaire*taux/100;
   }
 
-  this.assuranceApayer = function(){
-    console.log("l'assurance a payer de " + this.name + " est : " + this.salaire*7/100);
-    return this.salaire*7/100;
+  this.assuranceApayer = function(){    
+      return this.salaire*7/100;
   }
 
   this.pensionAPayer = function(){
-    console.log("la pension a payer de " + this.name + " est : " + this.salaire*5/100);
     return this.salaire*5/100;
   }
 
   this.salaireNet = function(){
     return this.salaire - this.impotsAPayer() - this.assuranceApayer() - this.pensionAPayer();
   }
+
+}
+
+function getValue() {
+    let test1 = document.getElementById("name").value;
+    let test1 = document.getElementById("salaire").value;
+    let test1 = document.getElementById("sexe").value;
+    let test1 = document.getElementById("charge").value;
 
 }
 
