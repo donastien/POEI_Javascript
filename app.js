@@ -94,14 +94,12 @@ res1 = livre1.displayPage();
 */
 
 // Exercice Salaire
-function personne(name, salaire, sexe, charge, bonus, allocation){
+function Personne(name, salaire, sexe, charge){
   
   this.name = name;
   this.salaire = salaire;
   this.sexe = sexe;
   this.charge = charge;
-  this.bonus = bonus;
-  this.allocation = allocation;
 
   this.impotsAPayer = function(){
     var taux = 18;
@@ -132,16 +130,19 @@ function personne(name, salaire, sexe, charge, bonus, allocation){
 
 }
 
+
 function getValue() {
-    let test1 = document.getElementById("name").value;
-    let test1 = document.getElementById("salaire").value;
-    let test1 = document.getElementById("sexe").value;
-    let test1 = document.getElementById("charge").value;
+    let name = document.getElementById("name").value;
+    let salaire = document.getElementById("salaire").value;
+    let sexe = document.getElementById("sexe").value;
+    let charge = document.getElementById("charge").value;
+    let salarie = new Personne(name, salaire, sexe, charge);
+    res1 = name + ' ton salaire est de ' + (salarie.salaireNet()) + '€.';
+    txt1.innerHTML = res1;
 
 }
 
-let thomas = new personne("thomas", 1200, "F", 4);
-res1 = (thomas.salaireNet());
+
 
 /*---------------------Fin Exercices---------------------*/
 txt1.innerHTML = res1;
