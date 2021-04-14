@@ -8,21 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!--- 
     <h1>Calcul Salaire</h1>
-    <span>Nom</span>
+    <label>Nom</label>
     <input id="name" type="text">
     <br><br>
-    <span>Salaire</span>
-    <input id="salaire" type="text">
-    <br><br>
-    <span>Sexe</span>
-    <input id="sexe" type="text">
-    <br><br>
-    <span>Charge</span>
-    <input id="charge" type="text">
+    <label>Salaire</label>
+    <input id="salaire" type="number">
+    <div>
+        <input type="radio" id="femme" name="sexe" value="femme">
+        <label for="femme">Femme</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="homme" name="sexe" value="homme">
+        <label for="homme">Homme</label>
+      </div>
+    <label>Nombre de personne à charge</label>
+    <input id="charge" type="number">
     <br><br>
     <input type="button" value="Valider" onclick=getValue()>
+-->
 
+<input type="text" id="course"><input type="button" value="OK" onclick="ajout()">
+<input type="button" value="Reset" onclick="reset()">
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
 
     <div>
         <h1 class="text1"></h1>

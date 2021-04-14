@@ -94,6 +94,7 @@ res1 = livre1.displayPage();
 */
 
 // Exercice Salaire
+/*
 function Personne(name, salaire, sexe, charge){
   
   this.name = name;
@@ -103,7 +104,7 @@ function Personne(name, salaire, sexe, charge){
 
   this.impotsAPayer = function(){
     var taux = 18;
-    if(this.sexe === "F"){
+    if(this.sexe === "femme"){
       taux-=2;
     }
     switch(charge){
@@ -134,14 +135,29 @@ function Personne(name, salaire, sexe, charge){
 function getValue() {
     let name = document.getElementById("name").value;
     let salaire = document.getElementById("salaire").value;
-    let sexe = document.getElementById("sexe").value;
+    let sexe = document.getElementsByName("sexe").value;
     let charge = document.getElementById("charge").value;
     let salarie = new Personne(name, salaire, sexe, charge);
+    console.log(sexe);
     res1 = name + ' ton salaire est de ' + (salarie.salaireNet()) + '€.';
     txt1.innerHTML = res1;
+    console.log(res1)
 
 }
+*/
 
+function ajout() {
+    let newItem = document.getElementById("course").value;
+    const liste = document.getElementById('listecommissions');
+    liste.innerHTML += '<li>'+newItem + '</li>';
+    document.getElementById("course").value = '';
+}
+
+function reset() {
+    const liste = document.getElementById('listecommissions');
+    document.getElementById("course").value = '';
+    liste.innerHTML = '';
+}
 
 
 /*---------------------Fin Exercices---------------------*/
