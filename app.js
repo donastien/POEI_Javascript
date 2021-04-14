@@ -146,6 +146,7 @@ function getValue() {
 }
 */
 
+/*
 function ajout() {
     let newItem = document.getElementById("course").value;
     const liste = document.getElementById('listecommissions');
@@ -158,6 +159,18 @@ function reset() {
     document.getElementById("course").value = '';
     liste.innerHTML = '';
 }
+*/
+// Exercice changement de style
+/*
+const ajoute = () => {
+    const color = ['red', 'blue', 'yellow', 'green', 'orange', 'DarkBlue', 'Chocolate']
+    let pickColor = color[Math.floor(Math.random() *  6)];
+    document.getElementById('zone').style = 'color: ' + pickColor;
+}
+
+const supprime = () => {document.getElementById('zone').removeAttribute("style");}
+*/
+
 
 
 /*---------------------Fin Exercices---------------------*/
