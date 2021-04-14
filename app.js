@@ -171,7 +171,65 @@ const ajoute = () => {
 const supprime = () => {document.getElementById('zone').removeAttribute("style");}
 */
 
+/*
+class Document {
+    constructor(numEnreg, titre) {
+        this.numEnreg = numEnreg;
+        this.titre = titre;
+    }
 
+    get document() {
+        return this.numEnreg + ' : ' + this.titre;
+    }
+}
+
+class Livre extends Document {
+    constructor(numEnreg, titre, auteur, nbrPages) {
+        super(numEnreg,titre);
+        this.auteur = auteur;
+        this.nbrPages = nbrPages;
+    }
+
+    get livre() {
+        return this.numEnreg + ' : ' + this.titre + ', auteur :  ' + this.auteur + ', ' + this.nbrPages + ' pages';
+    }
+}
+
+class Revue extends Document {
+    constructor(numEnreg, titre, mois, annee) {
+        super(numEnreg,titre);
+        this.mois = mois;
+        this.annee = annee;
+    }
+
+    get revue() {
+        return this.numEnreg + ' : ' + this.titre + ', date : ' + this.mois + ' ' + this.annee;
+    }
+}
+
+class Dictionnaire extends Document {
+    constructor(numEnreg, titre, langue) {
+        super(numEnreg,titre);
+        this.langue = langue;
+    }
+
+    get dictionnaire() {
+        return this.numEnreg + ' : ' + this.titre + ', langue :  ' + this.langue;
+    }
+}
+
+testDocument = new Document(1, 'Test');
+res1 = testDocument.document;
+
+testLivre = new Livre(2, 'Livre 1', 'Zola', 100);
+res2 = testLivre.livre;
+
+testRevue = new Revue(3, 'La Revue du monde', 'Mars', 2020);
+res3 = testRevue.revue;
+
+testDico = new Dictionnaire(4, 'Dico Larousse', 'Français');
+res4 = testDico.dictionnaire;
+*/
 
 /*---------------------Fin Exercices---------------------*/
 txt1.innerHTML = res1;
